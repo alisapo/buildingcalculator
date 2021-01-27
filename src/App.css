@@ -1,0 +1,110 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.step {
+  color: gray;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.variations {
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.subheader {
+  padding: 15px 85px 15px 85px;
+  font-size: 18px;
+  background-color: gainsboro;
+  color: #4343a7;
+  margin-bottom: 20px;
+}
+
+.data,
+.data-success,
+.data-error {
+  padding: 0 20px 20px 20px;
+}
+
+.data-success {
+  color: #4343a7;
+}
+
+.data-error {
+  color: red;
+}
+
+.data-parameters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 17px;
+}
+
+.separator {
+  padding: 0 7px 0 7px;
+}
+
+.sizex,
+.sizey,
+.height {
+  width: 90px;
+  height: 20px;
+  outline: none;
+}
+
+.sizex::-webkit-outer-spin-button,
+.sizex::-webkit-inner-spin-button,
+.sizey::-webkit-outer-spin-button,
+.sizey::-webkit-inner-spin-button,
+.height::-webkit-outer-spin-button,
+.height::-webkit-inner-spin-button
+ {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.sizex[type=number],
+.sizey[type=number],
+.height[type=number] {
+  -moz-appearance: textfield;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.deny-button,
+.next-button {
+  padding: 7px 15px 7px 15px;
+  border-radius: 7px;
+  border: 1px solid grey;
+  font-size: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.field {
+  font-size: 18px;
+}
+
+.linked {
+  text-decoration: none;
+}
