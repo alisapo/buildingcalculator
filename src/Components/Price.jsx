@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 
 import DenyButton from './DenyButton';
 
+const url = "https://data.techart.ru/lab/json/?building=";
+
 class Price extends React.Component {
   componentWillMount() {
-    fetch(`https://data.techart.ru/lab/json/?building=
+    fetch(
+      `${url}
       ${this.props.building}
       &height=${this.props.height}
       &material=${this.props.material}
@@ -20,14 +23,18 @@ class Price extends React.Component {
     if (this.props.status == 'error') return (
       <div className="variations">
         <div className="subheader">Ошибка</div>
-        <div className="data-error">{this.props.message}</div>
+        <div className="data-error">
+          {!this.props.message ? 'Считаю...' : this.props.message}
+        </div>
       </div>
     );
 
     return(
       <div className="variations">
         <div className="subheader">Успешно</div>
-        <div className="data-success">Цена строения: {this.props.message}</div>
+        <div className="data-success">
+          Цена строения: {!this.props.message ? 'Считаю...' : this.props.message}
+        </div>
       </div>
     );
   }
